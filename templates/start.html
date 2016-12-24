@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlackPeak</title>
+</head>
+<body>
+
+<form method="post" action="/post_user">
+    <fieldset>
+        <label>Username : </label>
+        <input type="text" name="username" id="username" placeholder="Enter Your Username" />
+        <label>Email : </label>
+        <input type="text" name="email" id="email" placeholder="Enter Your Email" />
+        <input type="submit" value="Submit"/>
+    </fieldset>
+</form>
+
+{% for user in myUser %}
+    <li>{{ user.username }} - {{ user.email }}</li>
+{% endfor %}
+
+<h1> ADMIN -> {{ admin.username }} </h1>
+
+</body>
+</html>
