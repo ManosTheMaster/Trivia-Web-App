@@ -70,15 +70,28 @@
 
     <header>
         <div class="header-content">
-            <div class="header-content-inner">
+
                 <h1 id="homeHeading">Welcome to our trivia!</h1>
                 <hr>
-                <p>Choose wisely...</p>
-                <a href="{{ url_for('technology') }}" class="btn btn-primary btn-xl page-scroll">Technology</a>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Sports</a>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">History</a>
+                <form method="post" action="/register">
+                <div class="form-group" align="center">
+                    <input class="form-control" id="username" name="username" type="text" style="width:300px;" placeholder="Your Name ...">
+                    <br>
+                    <input class="form-control" id="email" name="email" type="text" style="width:300px;" align="center" placeholder="Your Email ...">
+
+                </div>
+
+
+                <button type="submit" class="btn btn-default" style="color: #F05F40">Register</button>
+                <button type="submit" class="btn btn-default" style="color: #F05F40">Log In</button>
+                </form>
+
+{#                <p>Choose wisely...</p>#}
+{#                <a href="{{ url_for('technology') }}" class="btn btn-primary btn-xl page-scroll">Technology</a>#}
+{#                <a href="#about" class="btn btn-primary btn-xl page-scroll">Sports</a>#}
+{#                <a href="#about" class="btn btn-primary btn-xl page-scroll">History</a>#}
             </div>
-        </div>
+
     </header>
 
     <section class="bg-primary" id="about">
