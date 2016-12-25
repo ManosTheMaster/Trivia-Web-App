@@ -69,22 +69,22 @@
     </nav>
 
     <header>
-        <div class="header-content">
+            <div class="header-content">
+                <h1>Welcome to blackpeak's trivia</h1>
+                <br>
 
-                <h1 id="homeHeading">Welcome to our trivia!</h1>
-                <hr>
-                <form method="post" action="/register">
-                <div class="form-group" align="center">
-                    <input class="form-control" id="username" name="username" type="text" style="width:300px;" placeholder="Your Name ...">
+                <div align="center">
+                    <form method="post" al action="/post_user" style="width: 400px;">
+                    <label>Username:</label>
+                    <input id="username" class="form-control input-sm" name="username" type="text" />
                     <br>
-                    <input class="form-control" id="email" name="email" type="text" style="width:300px;" align="center" placeholder="Your Email ...">
-
+                    <label>Email:</label>
+                    <input id="email" class="form-control input-sm" name="email" type="text" />
+                    <br>
+                    <input type="submit" class="form-control btn-default" style="width: 200px; color: #F05F40" />
+                </form>
                 </div>
 
-
-                <button type="submit" class="btn btn-default" style="color: #F05F40">Register</button>
-                <button type="submit" class="btn btn-default" style="color: #F05F40">Log In</button>
-                </form>
 
 {#                <p>Choose wisely...</p>#}
 {#                <a href="{{ url_for('technology') }}" class="btn btn-primary btn-xl page-scroll">Technology</a>#}
