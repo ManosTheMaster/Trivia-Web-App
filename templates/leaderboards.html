@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Technology</title>
+    <title>Leaderboards</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,49 +43,37 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href=" {{ url_for('index') }} ">Blackpeak</a>
+                <a class="navbar-brand page-scroll" href="{{ url_for('index') }}">Blackpeak</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
 
-                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Welcome to the Technology Section</h1>
-                <hr>
-                <h4>Are You Ready?</h4>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Proceed!</a>
-            </div>
-        </div>
-    </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary" id="about" style="height: 100%">
         <div class="container">
-            <div class="row" >
-                <div class="col-lg-8 text-center" style="width:100%;">
-                    <b> #1</b>
-                   <h3>Who is the third co-founder of Apple Computers Inc. other than Steve Jobs and Stephan Wozniak?</h3>
-                   <br>
-                   <div class="input-group-lg">
-                       <button type="submit" href="{{ url_for('technology') }}" class="page-scroll btn btn-default btn-lg sr-button" >Mike Markkula</button>
-                       <input type="submit" href="technology/2" class="page-scroll btn btn-default btn-lg sr-button" value="John Sculley"/>
-                       <input type="submit" href="#q2" class="page-scroll btn btn-default btn-lg sr-button" value="Bill Gates"/>
-                       <input type="submit" href="#q2" class="page-scroll btn btn-default btn-lg sr-button" value="Ronald Wayne"/>
-                       <input type="submit" href="#q2" class="page-scroll btn btn-default btn-lg sr-button" value="Jonathan Eve"/>
-                   </div> <br><br style="height: 40%;">
-                </div>
+           <div class="row" align="center">
 
 
-            </div>
+               {% for item in list %}
+
+                    <div class="row">
+                      <div class="col-xs-4"> # {{ item.id }}</div>
+                      <div class="col-xs-4"> {{ item.username }} </div>
+                      <div class="col-xs-4"> {{ item.score }} </div>
+                    </div>
+
+               {% endfor %}
+
+
+
+           </div>
         </div>
     </section>
 
