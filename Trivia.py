@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
-
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:mitsos123@localhost/user_db'
-app.debug = False
+
+app.debug = True
+
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -21,16 +23,16 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
+
 # HomePage
 @app.route('/')
 def index():
-    score = 0
     return render_template("index.html")
 
-# Technology Section
-@app.route('/technology')
-def technology():
-    return render_template("technology.html")
+
+@app.route('/selector')
+def selector(name):
+    return render_template("selector.html", name=name)
 
 
 # Register User
@@ -39,13 +41,14 @@ def post_user():
     user = User(request.form['username'], request.form['email'], 0)
     db.session.add(user)
     db.session.commit()
-    return redirect(url_for('index'))
+    return redirect(url_for('selector',name=request.form['username']))
 
 
 @app.route('/leaderboards')
 def leaderboards():
     list = User.query.all()
     return render_template('leaderboards.html', list=list)
+
 
 if __name__ == '__main__':
     app.run()

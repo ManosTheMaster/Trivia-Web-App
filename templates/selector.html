@@ -3,15 +3,13 @@
 
 <head>
 
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Leaderboards</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +34,7 @@
 
 </head>
 
-<body id="page-top">
+<body bgcolor="#F05F40" id="page-top">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -45,67 +43,28 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Blackpeak</a>
+                <a class="navbar-brand page-scroll" href="{{ url_for('index') }}">Blackpeak</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-{#                    <li>#}
-{#                        <a class="page-scroll" href="#about">About</a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a class="page-scroll" href="#services">Services</a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a class="page-scroll" href="#portfolio">Portfolio</a>#}
-{#                    </li>#}
-                    <li>
-                        <a class="page-scroll" href=" {{ url_for('leaderboards') }} ">Leaderboards</a>
-                    </li>
-                </ul>
+
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
-            <div class="header-content">
-                <h1>Welcome to blackpeak's trivia</h1>
-                <br>
 
-                <div align="center">
-                    <form method="post" action="/post_user" style="width: 250px;">
-                        <label>Your Name</label>
-                        <input id="username" class="form-control input-sm" name="username" placeholder="John" type="text" />
-                        <br>
-                        <label>Your Email</label>
-                        <input id="email" class="form-control input-sm" name="email" placeholder="john@gmail.com" type="text" />
-                        <br>
-                        <input type="submit" class="form-control btn-default" style="width: 120px; color: #F05F40" />
-                    </form>
-                </div>
-
-
-{#                <p>Choose wisely...</p>#}
-{#                <a href="{{ url_for('technology') }}" class="btn btn-primary btn-xl page-scroll">Technology</a>#}
-{#                <a href="#about" class="btn btn-primary btn-xl page-scroll">Sports</a>#}
-{#                <a href="#about" class="btn btn-primary btn-xl page-scroll">History</a>#}
-            </div>
-
-    </header>
-
-    <section class="bg-primary" id="about">
+    <section class="bg-primary" id="about" style="height: 100%">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Test your skills!</h2>
-                    <hr class="light">
-                    <p class="text-faded">In this unique game, the Three Wise Men of trivia games will challenge you in a fun and challenging experience in your quest to join them in the books of history.</p>
-                    <a href="#page-top" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
-                </div>
-            </div>
+           <div class="row" align="center">
+               <p> Hello {{ name }} </p>
+
+               <button> Submit </button>
+
+
+           </div>
         </div>
     </section>
 
