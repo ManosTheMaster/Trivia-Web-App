@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for , flash
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:mitsos123@localhost/user_db'
+app.config['SECRET_KEY'] = 'super-secret'
 
 app.debug = True
 
@@ -31,17 +32,25 @@ def index():
 
 
 @app.route('/selector')
-def selector(name):
-    return render_template("selector.html", name=name)
+def selector(name, score):
+    return render_template("selector.html", name=name , score=score)
 
 
 # Register User
-@app.route('/post_user', methods=['POST'])
+@app.route('/post_user', methods=['POST','GET'])
 def post_user():
-    user = User(request.form['username'], request.form['email'], 0)
-    db.session.add(user)
-    db.session.commit()
-    return redirect(url_for('selector',name=request.form['username']))
+
+    username = User.query.filter_by(username=request.form['username']).first()
+    email = User.query.filter_by(email=request.form['email']).first()
+    if not username and not email:
+        user = User(request.form['username'], request.form['email'], 0)
+        db.session.add(user)
+        db.session.commit()
+        return render_template('selector.html', name=request.form['username'], score=user.score)
+    else:
+        flash("Username Or Email Already Exists",category='message')
+        return redirect(url_for('index'))
+
 
 
 @app.route('/leaderboards')
