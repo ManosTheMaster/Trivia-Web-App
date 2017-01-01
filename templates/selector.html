@@ -57,7 +57,11 @@
     <section class="bg-primary" id="about" style="height: 100%">
         <div class="container">
            <div class="row" align="center">
-               <p class="text-faded"> Hello {{ name }} Welcome To Our Quiz , Choose Your Category </p>
+               {% if already %}
+                   <p class="text-faded"> Welcome Back {{ name }} We Missed You , Choose Your Category </p>
+               {% else %}
+                   <p class="text-faded"> Hello {{ name }} Welcome To Our Quiz , Choose Your Category </p>
+               {% endif %}
                <br>
                <p class="text-faded"> Your Score Is {{ score }}</p>
 

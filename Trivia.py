@@ -40,23 +40,34 @@ def selector(name, score):
 @app.route('/post_user', methods=['POST','GET'])
 def post_user():
 
+    # Query For User
     username = User.query.filter_by(username=request.form['username']).first()
     email = User.query.filter_by(email=request.form['email']).first()
+
+    # Create A Valid User
     if not username and not email:
         user = User(request.form['username'], request.form['email'], 0)
         db.session.add(user)
         db.session.commit()
-        return render_template('selector.html', name=request.form['username'], score=user.score)
+        return render_template('selector.html', name=request.form['username'], score=user.score , already=False)
     else:
-        flash("Username Or Email Already Exists",category='message')
-        return redirect(url_for('index'))
-
+        # Check If User Has Already Played
+        if username and email:
+            # Simulate Login
+            user_score = User.query.filter_by(username=username.username).first().score
+            return render_template('selector.html', name=request.form['username'], score=user_score , already=True)
+        else:
+            return redirect(url_for('index'))
 
 
 @app.route('/leaderboards')
 def leaderboards():
     list = User.query.all()
     return render_template('leaderboards.html', list=list)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
