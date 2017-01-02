@@ -51,12 +51,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-{#                    <li>#}
-{#                        <a class="page-scroll" href="#about">About</a>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <a class="page-scroll" href="#services">Services</a>#}
-{#                    </li>#}
                     <li>
                         <a class="page-scroll" href=" {{ url_for('about') }} ">About This Game</a>
                     </li>
@@ -85,6 +79,9 @@
                         <label>Your Email</label>
                         <input id="email" class="form-control input-sm" name="email" placeholder="john@gmail.com" type="text" />
                         <br>
+                        {% if error %}
+                            <label style="color: red;"> Something Went Wrong!</label>
+                        {% endif %}
                         <input type="submit" value="Start" class="form-control btn-default" style="width: 120px; color: black" />
                     </form>
                 </div>
