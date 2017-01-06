@@ -79,9 +79,19 @@
                         <label>Your Email</label>
                         <input id="email" class="form-control input-sm" name="email" placeholder="john@gmail.com" type="text" />
                         <br>
-                        {% if error %}
-                            <label style="color: red;"> Something Went Wrong!</label>
-                        {% endif %}
+
+                        {% with messages = get_flashed_messages() %}
+                          {% if messages %}
+                            <div class=flashes>
+                            {% for message in messages %}
+                              <label style="color:#ffffff;">{{ message }}</label>
+                                <br>
+                            {% endfor %}
+                            </div>
+                          {% endif %}
+                        {% endwith %}
+
+
                         <input type="submit" value="Start" class="form-control btn-default" style="width: 120px; color: black" />
                     </form>
                 </div>
