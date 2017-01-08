@@ -1,23 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Technology</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="static/css/creative.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
+
+<body bgcolor="#F05F40" id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand page-scroll" href="{{ url_for('index') }}">Blackpeak</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
 
-<form method="post" action="/post_ans" style="width: 250px;">
 
-    <div class="radio">
-        <input type="radio" name="options" id="option1" value="option1"> Option1 </input><br>
-        <input type="radio" name="options" id="option2" value="option2"> Option2 </input><br>
-        <input type="radio" name="options" id="option3" value="option3"> Option3 </input><br>
-    </div>
+    <form name="myForm" action="/post_ans" method="post" onsubmit="alert('Thanks For Completing The Quiz!')">
+        <section class="bg-primary">
+            <div id="q1" class="text-center">
+                <p>Question 1</p>
+                <div class="radio">
+                    <input type="radio" name="options1" id="option1" value="option1"> Option1 </input><br>
+                    <input type="radio" name="options1" id="option2" value="option2"> Option2 </input><br>
+                    <input type="radio" name="options1" id="option3" value="option3"> Option3 </input><br>
+                    <input type="radio" name="options1" id="option2" value="option2"> Option2 </input><br>
+                    <input type="radio" name="options1" id="option3" value="option3"> Option3 </input><br>
+                </div>
+            </div>
+        </section>
+        <hr/>
+        <section class="bg-primary">
+            <div id="q1" class="text-center">
+                <p>Question 2</p>
+                <div class="radio">
+                    <input type="radio" name="options2" id="option1" value="option1"> Option1 </input><br>
+                    <input type="radio" name="options2" id="option2" value="option2"> Option2 </input><br>
+                    <input type="radio" name="options2" id="option3" value="option3"> Option3 </input><br>
+                    <input type="radio" name="options2" id="option2" value="option2"> Option2 </input><br>
+                    <input type="radio" name="options2" id="option3" value="option3"> Option3 </input><br>
+                </div>
+            </div>
+        </section>
+        <p><input type=submit value=Next></p>
+    </form>
 
 
-    <input type="submit" value="Start" class="form-control btn-default" style="width: 120px; color: black" />
-</form>
+
+    <!-- jQuery -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="static/js/creative.min.js"></script>
 
 </body>
+
 </html>

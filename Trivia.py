@@ -10,6 +10,7 @@ app.config['SECRET_KEY'] = 'super-secret'
 
 app.debug = True
 
+# Create Database
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -89,8 +90,8 @@ def tech():
 
 @app.route('/post_ans', methods=['POST'])
 def post_ans():
-    return request.form['options']
+    return redirect(url_for('selector'))
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0",port=80)
