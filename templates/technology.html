@@ -1,42 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Technology</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="static/css/creative.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
-<body bgcolor="#F05F40" id="page-top">
+<body bgcolor="#F05F40">
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -48,57 +21,52 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             </div>
-            <!-- /.navbar-collapse -->
+
         </div>
-        <!-- /.container-fluid -->
+
     </nav>
 
 
 
-    <form name="myForm" action="/post_ans" method="post" onsubmit="alert('Thanks For Completing The Quiz!')">
-        <section class="bg-primary">
-            <div id="q1" class="text-center">
-                <p>Question 1</p>
-                <div class="radio">
-                    <input type="radio" name="options1" id="option1" value="option1"> Option1 </input><br>
-                    <input type="radio" name="options1" id="option2" value="option2"> Option2 </input><br>
-                    <input type="radio" name="options1" id="option3" value="option3"> Option3 </input><br>
-                    <input type="radio" name="options1" id="option2" value="option2"> Option2 </input><br>
-                    <input type="radio" name="options1" id="option3" value="option3"> Option3 </input><br>
-                </div>
-            </div>
-        </section>
-        <hr/>
-        <section class="bg-primary">
-            <div id="q1" class="text-center">
-                <p>Question 2</p>
-                <div class="radio">
-                    <input type="radio" name="options2" id="option1" value="option1"> Option1 </input><br>
-                    <input type="radio" name="options2" id="option2" value="option2"> Option2 </input><br>
-                    <input type="radio" name="options2" id="option3" value="option3"> Option3 </input><br>
-                    <input type="radio" name="options2" id="option2" value="option2"> Option2 </input><br>
-                    <input type="radio" name="options2" id="option3" value="option3"> Option3 </input><br>
-                </div>
-            </div>
-        </section>
-        <p><input type=submit value=Next></p>
-    </form>
+    <div id="Questions" align="center">
+        <form method="post" action="/post_ans/{{user}}">
+            <section style="background-color: #F05F40">
+                <section>
+
+                    <p>Who is the third co-founder of Apple Computers Inc. other than Steve Jobs and Stephan Wozniak?</p>
+
+                    <input type="radio" name="q1" id="option1" value="option1"> Mike Markkula </input><br>
+                    <input type="radio" name="q1" id="option2" value="option2"> John Sculley </input><br>
+                    <input type="radio" name="q1" id="option3" value="option3"> Ronald Wayne </input><br>
+                    <input type="radio" name="q1" id="option4" value="option4"> Bill Gates </input><br>
+                    <input type="radio" name="q1" id="option5" value="option5"> Tim Cook </input><br>
+
+                </section>
+
+            <hr>
+
+                 <section>
+
+                    <p>Who is commonly credited as the inventor of the telephone?</p>
+
+                    <input type="radio" name="q2" id="option1" value="option1"> Al - Khwarizmi </input><br>
+                    <input type="radio" name="q2" id="option2" value="option2"> William Boeing </input><br>
+                    <input type="radio" name="q2" id="option3" value="option3"> Alexander Graham Bell </input><br>
+                    <input type="radio" name="q2" id="option4" value="option4"> Jeff Bezos </input><br>
+                    <input type="radio" name="q2" id="option5" value="option5"> Thomas Edison </input><br>
+
+                 </section>
+            </section>
 
 
 
-    <!-- jQuery -->
-    <script src="static/vendor/jquery/jquery.min.js"></script>
+            <button type="submit" class="btn btn-primary">Submit {{ user }}</button>
+        </form>
+    </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="static/js/creative.min.js"></script>
+
 
 </body>
 

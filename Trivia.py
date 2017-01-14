@@ -1,4 +1,3 @@
-# Author Δημήτρης Φιλίππου
 
 from flask import Flask, render_template, request, redirect, url_for , flash
 from flask_sqlalchemy import SQLAlchemy
@@ -83,15 +82,18 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/technology')
-def tech():
-    return render_template('technology.html')
+@app.route('/technology/<string:who>')
+def tech(who):
+    return render_template('technology.html', user=who)
 
 
-@app.route('/post_ans', methods=['POST'])
-def post_ans():
-    return redirect(url_for('selector'))
+@app.route('/post_ans/<string:name>', methods=['POST'])
+def post_ans(name):
+    if request.method == 'POST':
+        list = request.form['options']
+        return list
+
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=80)
+    app.run()
