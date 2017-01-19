@@ -9,193 +9,192 @@
 <body bgcolor="#F05F40">
 
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<div id="navbar" class="navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-
-                <a class="navbar-brand page-scroll" href="{{ url_for('index') }}">Blackpeak</a>
+                <a class="navbar-brand page-scroll" href="{{ url_for('index') }}">Return To Homepage</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            </div>
 
         </div>
 
-    </nav>
+    </div>
 
 
 
-    <div id="Questions" align="center">
-        <form method="post" action="/post_ans/{{user}}">
-            <section style="background-color: #F05F40">
-                <section>
+    <div id="Questions" align="center" style="font-size: large">
+        <form method="post" action="/post_tec/{{user}}">
+            <div>
+                <section class="jumbotron">
 
-                    <p>Who is the third co-founder of Apple Computers Inc. other than Steve Jobs and Stephan Wozniak?</p>
 
-                    <input type="radio" name="q1" id="option1" value="option1"> Mike Markkula </input><br>
-                    <input type="radio" name="q1" id="option2" value="option2"> John Sculley </input><br>
-                    <input type="radio" name="q1" id="option3" value="option3"> Ronald Wayne </input><br>
-                    <input type="radio" name="q1" id="option4" value="option4"> Bill Gates </input><br>
-                    <input type="radio" name="q1" id="option5" value="option5"> Tim Cook </input><br>
-                    <input type="radio" name="q1" id="option6" value="options6"> Gil Ameliio </input><br>
-                     <input type="radio" name="q1" id="option7" value="options7"> Jonathan Ive </input><br>
+                    <h2>Who is the third co-founder of Apple Computers Inc. other than Steve Jobs and Stephan Wozniak?</h2>
+
+                    <input type="radio" name="q0" id="option1" value="option1"> Mike Markkula </input>&nbsp;&nbsp;
+                    <input type="radio" name="q0" id="option2" value="option2"> John Sculley </input>&nbsp;&nbsp;
+                    <input type="radio" name="q0" id="option3" value="option3"> Ronald Wayne </input>&nbsp;&nbsp;
+                    <input type="radio" name="q0" id="option4" value="option4"> Bill Gates </input>&nbsp;&nbsp;
+                    <input type="radio" name="q0" id="option5" value="option5"> Tim Cook </input>&nbsp;&nbsp;
+                    <input type="radio" name="q0" id="option6" value="options6"> Gil Ameliio </input>&nbsp;&nbsp;
+                    <input type="radio" name="q0" id="option7" value="options7"> Jonathan Ive </input>&nbsp;&nbsp;
                 </section>
 
             <hr>
 
-                 <section>
+                 <section class="jumbotron">
 
-                    <p>Who is commonly credited as the inventor of the telephone?</p>
+                    <h2>Who is commonly credited as the inventor of the telephone?</h2>
 
-                    <input type="radio" name="q2" id="option1" value="option1"> Al - Khwarizmi </input><br>
-                    <input type="radio" name="q2" id="option2" value="option2"> William Boeing </input><br>
-                    <input type="radio" name="q2" id="option3" value="option3"> Alexander Graham Bell </input><br>
-                    <input type="radio" name="q2" id="option4" value="option4"> Jeff Bezos </input><br>
-                    <input type="radio" name="q2" id="option5" value="option5"> Thomas Edison </input><br>
-                    <input type="radio" name="q2" id="option6" value="option6"> Benjamin Franklin </input><br>
-                    <input type="radio" name="q2" id="option7" value="option7"> Antonio Santi Giuseppe Meucci </input><br>
+
+                    <input type="radio" name="q1" id="option1" value="option1"> Al - Khwarizmi </input>&nbsp;&nbsp;
+                    <input type="radio" name="q1" id="option2" value="option2"> William Boeing </input>&nbsp;&nbsp;
+                    <input type="radio" name="q1" id="option3" value="option3"> Alexander Graham Bell </input>&nbsp;&nbsp;
+                    <input type="radio" name="q1" id="option4" value="option4"> Jeff Bezos </input>&nbsp;&nbsp;
+                    <input type="radio" name="q1" id="option5" value="option5"> Thomas Edison </input>&nbsp;&nbsp;
+                    <input type="radio" name="q1" id="option6" value="option6"> Benjamin Franklin </input>&nbsp;&nbsp;
+                    <input type="radio" name="q1" id="option7" value="option7"> Antonio Santi Giuseppe Meucci </input>&nbsp;&nbsp;
 
 
                  </section>
 
 <hr>
 
-                 <section>
+                 <section class="jumbotron">
 
-                    <p>What section of the Government Code and Cypher School at Bletchley Park <br> was responsible for breaking the Enigma machine during the second world war?</p>
+                    <h2>What section of the Government Code and Cypher School at Bletchley Park <br> was responsible for breaking the Enigma machine during the second world war?</h2>
 
-                    <input type="radio" name="q3" id="option1" value="option1"> Hut 3</input><br>
-                    <input type="radio" name="q3" id="option2" value="option2"> Hut 4 </input><br>
-                    <input type="radio" name="q3" id="option3" value="option3"> Hut 6 </input><br>
-                    <input type="radio" name="q3" id="option4" value="option4"> Hut 8  </input><br>
-                    <input type="radio" name="q3" id="option5" value="option5"> B – Dienst </input><br>
-                    <input type="radio" name="q3" id="option6" value="option6"> Hut 9  </input><br>
-                    <input type="radio" name="q3" id="option7" value="option7"> Hut 10 </input><br>
-
-
-            </section>
-<hr>
-
-                 <section>
-
-                    <p>Which of the below was the first search engine on the internet?</p>
-
-                    <input type="radio" name="q4" id="option1" value="option1"> Lycos</input><br>
-                    <input type="radio" name="q4" id="option2" value="option2"> InfoSeek </input><br>
-                    <input type="radio" name="q4" id="option3" value="option3"> AltaVista </input><br>
-                    <input type="radio" name="q4" id="option4" value="option4"> Archie  </input><br>
-                    <input type="radio" name="q4" id="option5" value="option5"> Bing </input><br>
-                    <input type="radio" name="q4" id="option6" value="option6"> Yahoo  </input><br>
-                    <input type="radio" name="q4" id="option7" value="option7"> Google </input><br>
+                    <input type="radio" name="q2" id="option1" value="option1"> Hut 3</input>&nbsp;&nbsp;
+                    <input type="radio" name="q2" id="option2" value="option2"> Hut 4 </input>&nbsp;&nbsp;
+                    <input type="radio" name="q2" id="option3" value="option3"> Hut 6 </input>&nbsp;&nbsp;
+                    <input type="radio" name="q2" id="option4" value="option4"> Hut 8  </input>&nbsp;&nbsp;
+                    <input type="radio" name="q2" id="option5" value="option5"> B – Dienst </input>&nbsp;&nbsp;
+                    <input type="radio" name="q2" id="option6" value="option6"> Hut 9  </input>&nbsp;&nbsp;
+                    <input type="radio" name="q2" id="option7" value="option7"> Hut 10 </input>&nbsp;&nbsp;
 
 
             </section>
 <hr>
 
-                 <section>
+                 <section class="jumbotron">
 
-                    <p>Who first developed the graphical user interface or GUI?</p>
+                    <h2>Which of the below was the first search engine on the internet?</h2>
 
-                    <input type="radio" name="q5" id="option1" value="option1"> Sun Microsystems</input><br>
-                    <input type="radio" name="q5" id="option2" value="option2"> Apple Inc. </input><br>
-                    <input type="radio" name="q5" id="option3" value="option3"> Xerox Parc</input><br>
-                    <input type="radio" name="q5" id="option4" value="option4"> IMB</input><br>
-                    <input type="radio" name="q5" id="option5" value="option5"> Microsoft</input><br>
-                    <input type="radio" name="q5" id="option6" value="option6"> Oracle</input><br>
-                    <input type="radio" name="q5" id="option7" value="option7"> Dell</input><br>
-
-
-            </section>
-<hr>
-
-                 <section>
-
-                    <p>When was the social networking service by the name Facebook founded?</p>
-
-                    <input type="radio" name="q6" id="option1" value="option1"> 2001</input><br>
-                    <input type="radio" name="q6" id="option2" value="option2"> 2002</input><br>
-                    <input type="radio" name="q6" id="option3" value="option3"> 2003</input><br>
-                    <input type="radio" name="q6" id="option4" value="option4"> 2004</input><br>
-                    <input type="radio" name="q6" id="option5" value="option5"> 2005</input><br>
-                    <input type="radio" name="q6" id="option6" value="option6"> 1821</input><br>
-                    <input type="radio" name="q6" id="option7" value="option7"> 2007</input><br>
+                    <input type="radio" name="q3" id="option1" value="option1"> Lycos</input>&nbsp;&nbsp;
+                    <input type="radio" name="q3" id="option2" value="option2"> InfoSeek </input>&nbsp;&nbsp;
+                    <input type="radio" name="q3" id="option3" value="option3"> AltaVista </input>&nbsp;&nbsp;
+                    <input type="radio" name="q3" id="option4" value="option4"> Archie  </input>&nbsp;&nbsp;
+                    <input type="radio" name="q3" id="option5" value="option5"> Bing </input>&nbsp;&nbsp;
+                    <input type="radio" name="q3" id="option6" value="option6"> Yahoo  </input>&nbsp;&nbsp;
+                    <input type="radio" name="q3" id="option7" value="option7"> Google </input>&nbsp;&nbsp;
 
 
             </section>
 <hr>
 
-                 <section>
+                 <section class="jumbotron">
 
-                    <p>Where are the headquarters of Microsoft located?</p>
+                    <h2>Who first developed the graphical user interface or GUI?</h2>
 
-                    <input type="radio" name="q7" id="option1" value="option1"> Albuquerque, New Mexico</input><br>
-                    <input type="radio" name="q7" id="option2" value="option2"> Menlo Park, California</input><br>
-                    <input type="radio" name="q7" id="option3" value="option3"> Stanford, California</input><br>
-                    <input type="radio" name="q7" id="option4" value="option4"> Redmond, Washington</input><br>
-                    <input type="radio" name="q7" id="option5" value="option5"> Cupertino, California</input><br>
-                    <input type="radio" name="q7" id="option6" value="option6"> Washington D.C.</input><br>
-                    <input type="radio" name="q7" id="option7" value="option7"> San Francisco, California</input><br>
-
-
-            </section>
-<hr>
-
-                 <section>
-
-                    <p>Who has envisioned the Hyperloop?</p>
-
-                    <input type="radio" name="q8" id="option1" value="option1"> Thomas Edison</input><br>
-                    <input type="radio" name="q8" id="option2" value="option2"> Elon Musk</input><br>
-                    <input type="radio" name="q8" id="option3" value="option3"> Richard Feynman</input><br>
-                    <input type="radio" name="q8" id="option4" value="option4"> Richard Branson</input><br>
-                    <input type="radio" name="q8" id="option5" value="option5"> Steve Jobs</input><br>
-                    <input type="radio" name="q8" id="option6" value="option6"> Bill Gates</input><br>
-                    <input type="radio" name="q8" id="option7" value="option7"> Larry Elisson</input><br>
+                    <input type="radio" name="q4" id="option1" value="option1"> Sun Microsystems</input>&nbsp;&nbsp;
+                    <input type="radio" name="q4" id="option2" value="option2"> Apple Inc. </input>&nbsp;&nbsp;
+                    <input type="radio" name="q4" id="option3" value="option3"> Xerox Parc</input>&nbsp;&nbsp;
+                    <input type="radio" name="q4" id="option4" value="option4"> IMB</input>&nbsp;&nbsp;
+                    <input type="radio" name="q4" id="option5" value="option5"> Microsoft</input>&nbsp;&nbsp;
+                    <input type="radio" name="q4" id="option6" value="option6"> Oracle</input>&nbsp;&nbsp;
+                    <input type="radio" name="q4" id="option7" value="option7"> Dell</input>&nbsp;&nbsp;
 
 
             </section>
 <hr>
 
-                 <section>
+                 <section class="jumbotron">
 
-                    <p>Which is the first surveillance program unveiled through the <br> Snowden Revelations under which the NSA collects internet communications?</p>
+                    <h2>When was the social networking service by the name Facebook founded?</h2>
 
-                    <input type="radio" name="q9" id="option1" value="option1"> Tempora</input><br>
-                    <input type="radio" name="q9" id="option2" value="option2"> XKeyscore</input><br>
-                    <input type="radio" name="q9" id="option3" value="option3"> PRISM</input><br>
-                    <input type="radio" name="q9" id="option4" value="option4"> Bullrun</input><br>
-                    <input type="radio" name="q9" id="option5" value="option5"> HeartBeat</input><br>
-                    <input type="radio" name="q9" id="option6" value="option6"> INFOP</input><br>
-                    <input type="radio" name="q9" id="option7" value="option7"> Datacoll</input><br>
+                    <input type="radio" name="q5" id="option1" value="option1"> 2001</input>&nbsp;&nbsp;
+                    <input type="radio" name="q5" id="option2" value="option2"> 2002</input>&nbsp;&nbsp;
+                    <input type="radio" name="q5" id="option3" value="option3"> 2003</input>&nbsp;&nbsp;
+                    <input type="radio" name="q5" id="option4" value="option4"> 2004</input>&nbsp;&nbsp;
+                    <input type="radio" name="q5" id="option5" value="option5"> 2005</input>&nbsp;&nbsp;
+                    <input type="radio" name="q5" id="option6" value="option6"> 1821</input>&nbsp;&nbsp;
+                    <input type="radio" name="q5" id="option7" value="option7"> 2007</input>&nbsp;&nbsp;
 
 
             </section>
 <hr>
 
-                 <section>
+                 <section class="jumbotron">
 
-                    <p>Where is the RSA algorithm been used?</p>
+                    <h2>Where are the headquarters of Microsoft located?</h2>
 
-                    <input type="radio" name="q10" id="option1" value="option1"> Quantum programming</input><br>
-                    <input type="radio" name="q10" id="option2" value="option2"> Voice recognition</input><br>
-                    <input type="radio" name="q10" id="option3" value="option3"> Secure internet data transmission</input><br>
-                    <input type="radio" name="q10" id="option4" value="option4"> Artificial intelligence</input><br>
-                    <input type="radio" name="q10" id="option5" value="option5"> Optical computing</input><br>
-                    <input type="radio" name="q10" id="option6" value="option6"> Photonic data transmissions </input><br>
-                    <input type="radio" name="q10" id="option7" value="option7"> Virtual reality</input><br>
+                    <input type="radio" name="q6" id="option1" value="option1"> Albuquerque, New Mexico</input>&nbsp;&nbsp;
+                    <input type="radio" name="q6" id="option2" value="option2"> Menlo Park, California</input>&nbsp;&nbsp;
+                    <input type="radio" name="q6" id="option3" value="option3"> Stanford, California</input>&nbsp;&nbsp;
+                    <input type="radio" name="q6" id="option4" value="option4"> Redmond, Washington</input>&nbsp;&nbsp;
+                    <input type="radio" name="q6" id="option5" value="option5"> Cupertino, California</input>&nbsp;&nbsp;
+                    <input type="radio" name="q6" id="option6" value="option6"> Washington D.C.</input>&nbsp;&nbsp;
+                    <input type="radio" name="q6" id="option7" value="option7"> San Francisco, California</input>&nbsp;&nbsp;
 
 
             </section>
+<hr>
+
+                 <section class="jumbotron">
+
+                    <h2>Who has envisioned the Hyperloop?</h2>
+
+                    <input type="radio" name="q7" id="option1" value="option1"> Thomas Edison</input>&nbsp;&nbsp;
+                    <input type="radio" name="q7" id="option2" value="option2"> Elon Musk</input>&nbsp;&nbsp;
+                    <input type="radio" name="q7" id="option3" value="option3"> Richard Feynman</input>&nbsp;&nbsp;
+                    <input type="radio" name="q7" id="option4" value="option4"> Richard Branson</input>&nbsp;&nbsp;
+                    <input type="radio" name="q7" id="option5" value="option5"> Steve Jobs</input>&nbsp;&nbsp;
+                    <input type="radio" name="q7" id="option6" value="option6"> Bill Gates</input>&nbsp;&nbsp;
+                    <input type="radio" name="q7" id="option7" value="option7"> Larry Elisson</input>&nbsp;&nbsp;
 
 
+            </section>
+<hr>
+
+                 <section class="jumbotron">
+
+                    <h2>Which is the first surveillance program unveiled through the <br> Snowden Revelations under which the NSA collects internet communications?</h2>
 
 
+                    <input type="radio" name="q8" id="option1" value="option1"> Tempora</input>&nbsp;&nbsp;
+                    <input type="radio" name="q8" id="option2" value="option2"> XKeyscore</input>&nbsp;&nbsp;
+                    <input type="radio" name="q8" id="option3" value="option3"> PRISM</input>&nbsp;&nbsp;
+                    <input type="radio" name="q8" id="option4" value="option4"> Bullrun</input>&nbsp;&nbsp;
+                    <input type="radio" name="q8" id="option5" value="option5"> HeartBeat</input>&nbsp;&nbsp;
+                    <input type="radio" name="q8" id="option6" value="option6"> INFOP</input>&nbsp;&nbsp;
+                    <input type="radio" name="q8" id="option7" value="option7"> Datacoll</input>&nbsp;&nbsp;
 
 
+            </section>
+<hr>
+
+                 <section class="jumbotron">
+
+                    <h2>Where is the RSA algorithm been used?</h2>
+
+                    <input type="radio" name="q9" id="option1" value="option1"> Quantum programming</input>&nbsp;&nbsp;
+                    <input type="radio" name="q9" id="option2" value="option2"> Voice recognition</input>&nbsp;&nbsp;
+                    <input type="radio" name="q9" id="option3" value="option3"> Secure internet data transmission</input>&nbsp;&nbsp;
+                    <input type="radio" name="q9" id="option4" value="option4"> Artificial intelligence</input>&nbsp;&nbsp;
+                    <input type="radio" name="q9" id="option5" value="option5"> Optical computing</input>&nbsp;&nbsp;
+                    <input type="radio" name="q9" id="option6" value="option6"> Photonic data transmissions </input>&nbsp;&nbsp;
+                    <input type="radio" name="q9" id="option7" value="option7"> Virtual reality</input>&nbsp;&nbsp;<br>
+
+
+                 </section>
+
+
+            </div>
+
+
+            <hr>
             <button type="submit" class="btn btn-primary">Submit {{ user }}</button>
+            <br><br>
         </form>
     </div>
 
@@ -206,93 +205,3 @@
 </body>
 
 </html>
-
-<!-- #1 Who is the third co-founder of Apple Computers Inc. other than Steve Jobs and Stephan Wozniak?
-a.Mike Markkula
-b.John Sculley
-c.Bill Gates
-d.Ronald Wayne
-e.Jonathan Ive
-f.Tim Cook
-g.Gil Amelio
-
-#2 Who is commonly credited as the inventor of the first practical telephone?
-a.Al - Khwarizmi
-b.William Boeing
-c.Alexander Graham Bell
-d.Jeff Bezos
-e.Antonio Santi Giuseppe Meucci
-f.Thomas Edison
-g.Benjamin Franklin
-
-#3 What section of the Government Code and Cypher School at Bletchley Park was responsible for breaking the Enigma machine during the second world war?
-a.Hut 3
-b.Hut 4
-c.Hut 6
-d.Hut 8 
-e.B – Dienst
-f.Hut 9 
-g.Hut 10
-
-#4 Which of the below was the first search engine on the internet?
-a.Lycos
-b.Infoseek
-c.AltaVista
-d.Archie
-e.Bing
-f.Yahoo
-g.Google 
-
-#5 Who first developed the graphical user interface or GUI?
-a.Sun Microsystems
-b.Apple Inc.
-c.Xerox PARC
-d.IBM
-e.Microsoft
-f.Oracle
-g.Dell
-#6 When was the social networking service by the name Facebook founded?
-a.2001
-b.2002
-c.2003
-d.2004
-e.2005
-f.2006
-g.2007
-
-#7 Where are the headquarters of Microsoft located?
-a.Albuquerque, New Mexico
-b.Menlo Park, California
-c.Stanford, California
-d.Redmond, Washington
-e.Cupertino, California
-f.Washington D.C. 
-g.San Francisco, California 
-
-#8 Who has envisioned the Hyperloop?
-a.Thomas Edison
-b.Elon Musk
-c.Richard Feynman
-d.Richard Branson
-e.Steve Jobs
-f.Bill Gate
-g.Larry Elisson
-
-#9 Which is the first surveillance program unveiled through the Snowden Revelations under which the NSA collects internet communications?
-a.Tempora
-b.XKeyscore
-c.PRISM
-d.Bullrun
-e.Heartbeat
-f.INFOP
-g.Datacoll
-
-#10 Where is the RSA algorithm been used?
-a.Quantum programming
-b.Voice recognition
-c.Secure internet data transmission
-d.Artificial intelligence
-e.Optical computing
-f.Photonic data transmissions
-g.Virtual reality
--->

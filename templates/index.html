@@ -84,8 +84,13 @@
                           {% if messages %}
                             <div class=flashes>
                             {% for message in messages %}
-                              <label style="color:#ffffff;">{{ message }}</label>
-                                <br>
+
+                                <div class="alert alert-danger" role="alert">
+                                 <strong>Oh snap!</strong> Change a few things up and try submitting again. Reason : {{ message }}.
+                                </div>
+
+
+
                             {% endfor %}
                             </div>
                           {% endif %}
