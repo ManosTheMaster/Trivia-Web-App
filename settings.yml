@@ -1,6 +1,6 @@
 servers:
     digital_ocean:
-        ip_address : 178.62.40.62
+        ip_address : {ip}
         postgres : 'postgresql://postgres:mitsos123@localhost/user_db'
         key : 'super-secret'
 
