@@ -1,9 +1,6 @@
-servers:
-    digital_ocean:
-        ip_address : 178.62.40.62
-        postgres : 'postgresql://postgres:mitsos123@localhost/user_db'
-        key : 'super-secret'
-
+ip_address : '0.0.0.0'
+postgres   : 'postgresql://postgres:mitsos123@localhost/user_db'
+key        : 'super-secret'
 
 answers:
     technology: ['option3', 'option3', 'option4', 'option3', 'option3', 'option4', 'option4', 'option2', 'option3', 'option3']

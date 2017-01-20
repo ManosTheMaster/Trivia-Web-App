@@ -8,26 +8,31 @@ with open("C:/Users/FrozenVortex/Documents/Blackpeak/Trivia-Web-App/settings.yml
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = data['servers']['digital_ocean']['postgres']
-app.config['SECRET_KEY'] = data['servers']['digital_ocean']['key']
+app.config['SQLALCHEMY_DATABASE_URI'] = data['postgres']
+app.config['SECRET_KEY'] = data['key']
 
 app.debug = True
 
 # Create Database
 db = SQLAlchemy(app)
 
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
     email = db.Column(db.String(120), unique=True)
     score = db.Column(db.Integer, unique=False)
-    technology = db.Column(db.Boolean, unique=False)
+    technology = db.Column(db.Boolean)
+    history = db.Column(db.Boolean)
+    sports = db.Column(db.Boolean)
 
     def __init__(self, username, email, score):
         self.username = username
         self.email = email
         self.score = score
         self.technology = False
+        self.sports = False
+        self.history = False
 
     def __repr__(self):
         return '<User %r>' % self.username
@@ -37,6 +42,10 @@ class User(db.Model):
 @app.route('/')
 def index():
     return render_template("index.html")
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html',error=error)
 
 # User Selects Category Here
 @app.route('/selector')
@@ -69,7 +78,8 @@ def post_user():
 
             if user_email_sent  == server_mail_for_user:
                 user_score = User.query.filter_by(username=request.form['username']).first().score
-                return render_template('selector.html', name=request.form['username'], score=user_score , already=True)
+                has_completed = [username.technology, username.history, username.sports]
+                return render_template('selector.html', name=request.form['username'], score=user_score , already=True, has_completed=has_completed)
 
             else:
                 flash('Not Authorised!')
@@ -118,7 +128,7 @@ def post_tec(name):
         # Commit Changes
         db.session.commit()
 
-        return "You Won %s Points You Piece Of Shit! <br> This Page Looks Ugly And It Is Until A Front-End Fixes This Shit. <br> Anyway Here is What Changed <br> <ul><li>You Got %s Points</li><li>You Can't Play Anymore This Section Cause You Already Know The Answers</li><li>You Gave Satisfaction To The Developer Who Spent All This Time For Your Interaction With This Web App</li></ul>" %(str(pts),str(pts))
+        return "You Won %s Points ! <br> This Page Looks Ugly And It Is Until A Front-End Fixes This Shit. <br> Anyway Here is What Changed <br> <ul><li>You Got %s Points</li><li>You Can't Play Anymore This Section Cause You Already Know The Answers</li><li>You Gave Satisfaction To The Developer Who Spent All This Time For Your Interaction With This Web App</li></ul>" %(str(pts),str(pts))
 
 if __name__ == '__main__':
     app.run()

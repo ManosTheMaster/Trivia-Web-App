@@ -54,7 +54,7 @@
     </nav>
 
 
-    <section class="bg-primary" id="about" style="height: 100%">
+    <section class="bg-dark" id="about" style="height: 100%">
         <div class="container">
            <div class="row" align="center">
                {% if already %}
@@ -66,11 +66,20 @@
                <p class="text-faded"> Your Score Is {{ score }}</p>
                <br>
 
-               <div class="list-group" style="width: 40%">
-                  <a href=" {{ url_for('tech', who=name) }} " class="list-group-item">Technology</a>
-                  <a href="#" class="list-group-item">History</a>
-                  <a href="#" class="list-group-item">Sports</a>
-               </div>
+
+             <div class="panel-heading">
+                  <h3 class="panel-title">Categories</h3>
+                  <a href=" {{ url_for('tech', who=name) }}"> Technology</a><br>
+                  <a href="#" >History</a><br>
+                  <a href="#" >Sports</a><br>
+             </div>
+
+
+
+               {% for foo in has_completed %}
+                       {{ foo }}
+               {% endfor %}
+
 
 
            </div>
