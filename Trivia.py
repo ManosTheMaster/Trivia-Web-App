@@ -1,42 +1,20 @@
-
 from flask import Flask, render_template, request, redirect, url_for , flash
 from flask_sqlalchemy import SQLAlchemy
 import yaml
+from models import *
 
-with open("C:/Users/FrozenVortex/Documents/Blackpeak/Trivia-Web-App/settings.yml", 'r') as stream:
+with open("settings.yml", 'r') as stream:
     data = yaml.safe_load(stream)
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = data['postgres']
+app.config['SQLALCHEMY_DATABASE_URI'] = data['sqlite']
 app.config['SECRET_KEY'] = data['key']
 
 app.debug = True
 
 # Create Database
 db = SQLAlchemy(app)
-
-
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True)
-    email = db.Column(db.String(120), unique=True)
-    score = db.Column(db.Integer, unique=False)
-    technology = db.Column(db.Boolean)
-    history = db.Column(db.Boolean)
-    sports = db.Column(db.Boolean)
-
-    def __init__(self, username, email, score):
-        self.username = username
-        self.email = email
-        self.score = score
-        self.technology = False
-        self.sports = False
-        self.history = False
-
-    def __repr__(self):
-        return '<User %r>' % self.username
-
 
 # HomePage
 @app.route('/')

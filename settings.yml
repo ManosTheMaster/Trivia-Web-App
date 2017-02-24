@@ -1,5 +1,5 @@
 ip_address : '0.0.0.0'
-postgres   : 'postgresql://postgres:mitsos123@localhost/user_db'
+sqlite     : 'sqlite:///data.db'
 key        : 'super-secret'
 
 answers:
