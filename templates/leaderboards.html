@@ -1,15 +1,93 @@
 <html>
 <head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<meta charset="UTF-8">
+    <title>BlackPeak International Airways</title>
+	<style type="text/css">
+        body { background-color: gray; }
+		h1 { color: red; }
+        p { color: green; }
+    </style>
 <body>	
+	<menu id="top_menu"> <p><a href="http://127.0.0.1:5000"><form method="post" action="">
+        <input type="button" value="HOME" target="_top" <div class="container">
+     
+        <a href="http://127.0.0.1:5000" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </a>
+      </p> 
+      
+    </div>
+</button>>
+    </form></a></p></menu>
+	 <style type="text/css">
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1 {
+			font-family: "Times New Roman", Times, serif;
+		}
+    </style>
+	<style type="text/css">  
+    a {
+        width: 200px;
+        height: 40px;        
+        display: block;
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        
+    }
+    a:hover {
+       
+    }
+</style>
+
+    	
+    </div>
 	{% for item in list %}
 
-		<div class="row">
-		  <div class="col-xs-4"> # {{ item.id }}</div>
-		  <div class="col-xs-4"> {{ item.username }} </div>
-		  <div class="col-xs-4"> {{ item.score }} </div>
+		<div class="row" align="center">
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">Player {{item.username}}</h3>
+		  </div>
+		  <div class="panel-body">
+			<p style="color:white;font-size:18px;">
+				
+				   <div class="col-xs-4">Player number {{item.id}}</div>
+				  <!-- <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t34.0-12/17274871_1490882910936091_61649874_n.png?oh=522a46fd78014c45c7143560d9bc9030&oe=58C91D1F" " alt="user" width="50" height="50" align="center"> -->
+
+				  <div class="col-xs-4" align="center"> {{ item.username }} </div>
+				  <div class="col-xs-4" > score: {{  item.score }}  </div>
+				  
+		    </p>
+		  </div>
+		</div>
+		
+			
+			<hr>
+		</br>
+		
+		<!-- comments are printed like this -->
+		<!-- Your code is uglier than my ex-girlfriend -->
+		<!-- <img src="C:\Users\user\Desktop" alt="user" width="50" height="50" align="right" -->
+		
+		
+		
 		</div>
 
     {% endfor %}
+	<hr style="border-color:black;"></hr>
+	
+	<br><adress>This was the work and effort of DINO CALA</adress></br>
 </body>
 </html>
