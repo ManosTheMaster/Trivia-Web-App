@@ -5,24 +5,58 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://127.0.0.1:5000">Jumpamigo</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://127.0.0.1:5000/leaderboards">StatSpot</a></li>
+      <li><a href="http://127.0.0.1:5000">Profile</a></li>
+      <li><a href="http://127.0.0.1:5000/post_user">Categories</a></li>
+      <li><a href="http://127.0.0.1:5000/about">About</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+</div>
+  
+  
+<h1><div align="center" color="white"<p style="color:white;font-size30px;"> StatSpot <p>leaderboards</p>  </div></h1>
 <meta charset="UTF-8">
     <title>BlackPeak International Airways</title>
-	<style type="text/css">
-        body { background-color: gray; }
-		h1 { color: red; }
-        p { color: green; }
-    </style>
+		<style type="text/css">
+			body { background-color: gray; }
+			h1 { color: red; }
+			p { color: green; }
+		</style>
 <body>	
-	<menu id="top_menu"> <p><a href="http://127.0.0.1:5000"><form method="post" action="">
-        <input type="button" value="HOME" target="_top" <div class="container">
+<style type="top_header{background:black;border:1px solid blue;
+	padding: 20px;">
+
+	<menu id="top_menu"> 
+		<p><a href="http://127.0.0.1:5000"><form method="post" action="">
+			<input type="button" value="HOME" target="_top" <div class="container">
      
-        <a href="http://127.0.0.1:5000" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-home"></span> Home
-        </a>
-      </p> 
+			<a href="http://127.0.0.1:5000" class="btn btn-info btn-lg">
+				<span class="glyphicon glyphicon-home"></span> Home
+			</a>
+        </p> 
       
     </div>
-</button>>
+</button>
     </form></a></p></menu>
 	 <style type="text/css">
 		body {
@@ -48,7 +82,7 @@
     a:hover {
        
     }
-</style>
+	</style>
 
     	
     </div>
@@ -62,24 +96,30 @@
 		  </div>
 		  <div class="panel-body">
 			<p style="color:white;font-size:18px;">
-				
-				   <div class="col-xs-4">Player number {{item.id}}</div>
+				<div class="container">
+  <p>Click on the button to reveal statistics.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click to collapse</button>
+  <div id="demo" class="collapse">
+ <div class="col-xs-4">Player number {{item.id}}</div>
 				  <!-- <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t34.0-12/17274871_1490882910936091_61649874_n.png?oh=522a46fd78014c45c7143560d9bc9030&oe=58C91D1F" " alt="user" width="50" height="50" align="center"> -->
 
 				  <div class="col-xs-4" align="center"> {{ item.username }} </div>
 				  <div class="col-xs-4" > score: {{  item.score }}  </div>
+  </div>
+</div>
+				  
 				  
 		    </p>
 		  </div>
 		</div>
 		
+		
 			
-			<hr>
+			
 		</br>
 		
 		<!-- comments are printed like this -->
-		<!-- Your code is uglier than my ex-girlfriend -->
-		<!-- <img src="C:\Users\user\Desktop" alt="user" width="50" height="50" align="right" -->
+
 		
 		
 		
