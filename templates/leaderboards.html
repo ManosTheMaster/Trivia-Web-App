@@ -24,11 +24,11 @@
 
       </div>
 </nav>
-  
+
 <div class="container">
 </div>
-  
-  
+
+
 <h1><div align="center" color="white"<p style="color:white;font-size30px;"> StatSpot  leaderboards  </div></h1>
 <br>
 <meta charset="UTF-8">
@@ -36,44 +36,32 @@
 		<style type="text/css">
 			body { background-color: gray; }
 			h1 { color: red; }
-<<<<<<< HEAD
+
 		</style>
 <body bgcolor="#222"  background="http://www.snowboardsteez.com/wp-content/uploads/2015/05/Black-Mountain.jpg">
 
-<style type="img/css">  
+<style type="img/css">
         {
-  background-image:url('http://www.snowboardsteez.com/wp-content/uploads/2015/05/Black-Mountain.jpg');
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+            background-image:url('http://www.snowboardsteez.com/wp-content/uploads/2015/05/Black-Mountain.jpg');
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
 	</style>
-
-
-
-=======
-
 		</style>
 <body bgcolor="#222">
->>>>>>> 3116aeda1455e2e9eef39f61509a9022593fbe19
-<style type="text/ss">
+<style type="text/css">
     .top_header {
         background:black;border:1px solid blue;
         padding: 20px;
     }
 </style>
 
-
-
-<<<<<<< HEAD
-	<style type="img/css">  
-=======
-	<style type="text/css">  
->>>>>>> 3116aeda1455e2e9eef39f61509a9022593fbe19
+	<style type="text/css">
     a {
         width: 200px;
-        height: 40px;        
+        height: 40px;
         display: block;
         color: #000000;
         font-size: 18px;
@@ -81,81 +69,40 @@
         text-align: center;
         line-height: 40px;
         text-decoration: none;
-        
+
     }
     a:hover {
-       
+
     }
 	</style>
 
-    	
-
 	{% for item in list %}
-
 		<div class="row" align="center" >
-		
 		<div class="panel panel-default" style="width: 50%">
 		  <div class="panel-heading">
 			<h3 class="panel-title">Player {{item.username}}</h3>
 		  </div>
 		  <div class="panel-body">
-
-
-
               <p>Click on the button to reveal statistics.</p>
               <button type="button" id="btn{{item.id}}" class="btn btn-info" data-toggle="collapse" data-target="#demo{{item.id}}" onclick="$('#demo{{item.id}}').collapse();document.getElementById('btn{{item.id}}').disabled = 'true';">Click to collapse</button>
-
               <div id="demo{{item.id}}" class="collapse"><br>
-
                               <div class="col-xs-4">Player number {{item.id}}</div>
                               <div class="col-xs-4" align="center"> {{ item.username }} </div>
                               <div class="col-xs-4" > {{  item.score }} Points </div>
               </div>
-
-
-				  
-
 		  </div>
-
-		
-		
-			
-			
-
         </div>
-
-
-		
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 3116aeda1455e2e9eef39f61509a9022593fbe19
-		
-
 
     {% endfor %}
-<<<<<<< HEAD
-	
+
 	<div class="jumbotron">
-      <div class="container">
-        <h1>dont stop playin ma nigga!</h1>
+      <div class="container" align="center">
+        <h1>Don't stop playing!</h1>
         <p>Be part of the biggest Trivia community ever!</p>
       </div>
-    </div> 
-	
-	
-	
+  </div>
 
-	
-	<hr style="border-color:black;">
-	
 
-	
-=======
-	<hr style="border-color:black;">
-	
->>>>>>> 3116aeda1455e2e9eef39f61509a9022593fbe19
-	This was the work and effort of DINO CALA & sons
 </body>
 </html>

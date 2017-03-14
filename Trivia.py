@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = data['sqlite']
 app.config['SECRET_KEY'] = data['key']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.debug = False
+app.debug = True
 
 # Create Database
 db = SQLAlchemy(app)
