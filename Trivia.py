@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for , flash
 from flask_sqlalchemy import SQLAlchemy
 import yaml
-from models import *
 
 with open("settings.yml", 'r') as stream:
     data = yaml.safe_load(stream)
@@ -10,11 +9,13 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = data['sqlite']
 app.config['SECRET_KEY'] = data['key']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.debug = True
+app.debug = False
 
 # Create Database
 db = SQLAlchemy(app)
+from models import *
 
 # HomePage
 @app.route('/')
@@ -86,7 +87,7 @@ def tech(who):
 
 @app.route('/post_tec/<string:name>', methods=['POST'])
 def post_tec(name):
-    if request.method == 'POST':
+    if request.method == 'POST' and not User.query.filter_by(username=name).first().technology:
         pts = 0
         points = []
         for k in range(10):
@@ -107,6 +108,9 @@ def post_tec(name):
         db.session.commit()
 
         return "You Won %s Points ! <br> This Page Looks Ugly And It Is Until A Front-End Fixes This Shit. <br> Anyway Here is What Changed <br> <ul><li>You Got %s Points</li><li>You Can't Play Anymore This Section Cause You Already Know The Answers</li><li>You Gave Satisfaction To The Developer Who Spent All This Time For Your Interaction With This Web App</li></ul>" %(str(pts),str(pts))
+
+    else:
+        return "You have already played this! dont be a hacker! <a href='http://frozenvortex.com/'>go home</a>"
 
 if __name__ == '__main__':
     app.run()
