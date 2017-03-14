@@ -16,57 +16,51 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="http://127.0.0.1:5000">Jumpamigo</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="http://127.0.0.1:5000/leaderboards">StatSpot</a></li>
-      <li><a href="http://127.0.0.1:5000">Profile</a></li>
-      <li><a href="http://127.0.0.1:5000/post_user">Categories</a></li>
-      <li><a href="http://127.0.0.1:5000/about">About</a></li>
-    </ul>
-  </div>
+  <nav class="navbar navbar-inverse" style="margin: -1px">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <marquee><a class="navbar-brand" href="http://127.0.0.1:5000">Welcome to Jumpamigo</a></marquee>
+        </div>
+
+      </div>
 </nav>
   
 <div class="container">
 </div>
   
   
-<h1><div align="center" color="white"<p style="color:white;font-size30px;"> StatSpot <p>leaderboards</p>  </div></h1>
+<h1><div align="center" color="white"<p style="color:white;font-size30px;"> StatSpot  leaderboards  </div></h1>
+<br>
 <meta charset="UTF-8">
     <title>BlackPeak International Airways</title>
 		<style type="text/css">
 			body { background-color: gray; }
 			h1 { color: red; }
-			p { color: green; }
 		</style>
-<body>	
-<style type="top_header{background:black;border:1px solid blue;
-	padding: 20px;">
+<body bgcolor="#222"  background="http://www.snowboardsteez.com/wp-content/uploads/2015/05/Black-Mountain.jpg">
 
-	<menu id="top_menu"> 
-		<p><a href="http://127.0.0.1:5000"><form method="post" action="">
-			<input type="button" value="HOME" target="_top" <div class="container">
-     
-			<a href="http://127.0.0.1:5000" class="btn btn-info btn-lg">
-				<span class="glyphicon glyphicon-home"></span> Home
-			</a>
-        </p> 
-      
-    </div>
-</button>
-    </form></a></p></menu>
-	 <style type="text/css">
-		body {
-			font-family: Arial, Helvetica, sans-serif;
-		}
-		h1 {
-			font-family: "Times New Roman", Times, serif;
-		}
-    </style>
-	<style type="text/css">  
+<style type="img/css">  
+        {
+  background-image:url('http://www.snowboardsteez.com/wp-content/uploads/2015/05/Black-Mountain.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+	</style>
+
+
+
+<style type="text/ss">
+    .top_header {
+        background:black;border:1px solid blue;
+        padding: 20px;
+    }
+</style>
+
+
+
+	<style type="img/css">  
     a {
         width: 200px;
         height: 40px;        
@@ -85,49 +79,65 @@
 	</style>
 
     	
-    </div>
+
 	{% for item in list %}
 
-		<div class="row" align="center">
+		<div class="row" align="center" >
 		
-		<div class="panel panel-default">
+		<div class="panel panel-default" style="width: 50%">
 		  <div class="panel-heading">
 			<h3 class="panel-title">Player {{item.username}}</h3>
 		  </div>
 		  <div class="panel-body">
-			<p style="color:white;font-size:18px;">
-				<div class="container">
-  <p>Click on the button to reveal statistics.</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click to collapse</button>
-  <div id="demo" class="collapse">
- <div class="col-xs-4">Player number {{item.id}}</div>
-				  <!-- <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t34.0-12/17274871_1490882910936091_61649874_n.png?oh=522a46fd78014c45c7143560d9bc9030&oe=58C91D1F" " alt="user" width="50" height="50" align="center"> -->
 
-				  <div class="col-xs-4" align="center"> {{ item.username }} </div>
-				  <div class="col-xs-4" > score: {{  item.score }}  </div>
-  </div>
-</div>
+
+
+              <p>Click on the button to reveal statistics.</p>
+              <button type="button" id="btn{{item.id}}" class="btn btn-info" data-toggle="collapse" data-target="#demo{{item.id}}" onclick="$('#demo{{item.id}}').collapse();document.getElementById('btn{{item.id}}').disabled = 'true';">Click to collapse</button>
+
+              <div id="demo{{item.id}}" class="collapse"><br>
+
+                              <div class="col-xs-4">Player number {{item.id}}</div>
+                              <div class="col-xs-4" align="center"> {{ item.username }} </div>
+                              <div class="col-xs-4" > {{  item.score }} Points </div>
+              </div>
+
+
 				  
-				  
-		    </p>
+
 		  </div>
-		</div>
-		
-		
-			
-			
-		</br>
-		
-		<!-- comments are printed like this -->
 
 		
 		
+			
+			
+
+        </div>
+
+
 		
-		</div>
+        </div>
+
+		
+
 
     {% endfor %}
-	<hr style="border-color:black;"></hr>
 	
-	<br><adress>This was the work and effort of DINO CALA</adress></br>
+	<div class="jumbotron">
+      <div class="container">
+        <h1>dont stop playin ma nigga!</h1>
+        <p>Be part of the biggest Trivia community ever!</p>
+      </div>
+    </div> 
+	
+	
+	
+
+	
+	<hr style="border-color:black;">
+	
+
+	
+	This was the work and effort of DINO CALA & sons
 </body>
 </html>
