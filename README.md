@@ -1,3 +1,3 @@
 # Trivia-Web-App
 
-##The Best Web app by Jim fillipou!!!!!!!!
+## The Best Web app by Jim filippou!!!!!!!!
